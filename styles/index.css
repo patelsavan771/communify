@@ -26,16 +26,42 @@ body {
     display: inline-block;
 }
 
-#link {
+.link {
     color: rgba(255, 255, 255, .55);
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    
 }
 
-#link:hover {
+.link:hover {
     color: rgba(255, 255, 255, .95);
 }
+
+#link-login {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#left {
+    
+    width: 50%;
+    box-sizing: border-box;
+    padding: 70px ;
+    height: 60vh;
+
+    margin-bottom: 50px;
+}
+
+#left-text {
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
 
 
 #for-whom {
@@ -50,20 +76,60 @@ body {
 
 .card {
     background-color: #222;
-    display: inline-block;
     padding: 30px;
     margin: 10px;
     border-radius: 4px;
+
+
+    width: 25%;
 }
 
 .container {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.card .circle {
+.card-img {
+    width: 80%;
+}
+
+/* .card .circle {
     background-color: #444;
-    width: auto;
+    width: 150px;
+    height: 150px;
     margin: auto;
     padding: 20px;
     border-radius: 50%;
+} */
+
+@media (max-width:768px) {
+    .card {
+        width: 80%;
+    }
+    #left {
+        width: 100%;
+    }
+}
+
+
+
+#above-footer {
+    background-color: #444;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+
+.footer {
+    /* border : 1px solid yellow; */
+    padding: 8px;
+    text-align:center;
+
+}
+
+#logo2 {
+    margin: 0;
+    display: inline-block;
 }
