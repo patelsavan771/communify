@@ -15,20 +15,23 @@
     <div class="container-login">
         <div id="login-box">
             <div class="left">
-                <h2>Welcome back</h2>
-                <p>Welcome bake enter your details</p>
+                <h2>Welcome to communify</h2>
+                <p>Sign up, enter your details</p>
 
-                <form action="login.php">
+                <form action="signup.php">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email" placeholder="Enter your email" required>
 
                     <label for="password">Password:</label>
                     <input type="password" name="password" id="password" placeholder="********">
 
-                    <input type="submit" value="Sign in">
+                    <input type="submit" value="Sign up">
                 </form>
 
-                <p>Don't have an accout? <a href="signup.html" class="link">Sign Up</a></p>
+                <p>Already have an account? <a href="login.html" class="link">Login</a></p>
             </div>
 
             <div class="right">
