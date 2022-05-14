@@ -16,6 +16,9 @@ if(!isset($_SESSION["username"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    <link rel="icon" type="image/x-icon" href="images/fevicon.jpg">
+
+
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/home.css">
 </head>

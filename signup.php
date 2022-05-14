@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="images/fevicon.jpg">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/login.css">
 </head>

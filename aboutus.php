@@ -10,6 +10,8 @@ require 'includes/header.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Communify</title>
+    <link rel="icon" type="image/x-icon" href="images/fevicon.jpg">
+
 
     <link rel="stylesheet" href="styles/index.css">
 </head>
