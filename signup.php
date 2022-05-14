@@ -1,3 +1,29 @@
+<?php
+require 'includes/header.php';
+require 'db/conn.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    $ret = registerUser($conn, $name, $email, $password);
+    if ($ret) {
+        $_SESSION["username"] = $name;
+        // setcookie("username", $name, time() + 3600);
+        header("location: ccform.html");
+    }
+    else {
+        echo "
+            <script>
+                alert('".$_SESSION["error"]."');
+            </script>
+        ";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +44,7 @@
                 <h2>Welcome to communify</h2>
                 <p>Sign up, enter your details</p>
 
-                <form action="signup.php">
+                <form action="<?php $_PHP_SELF ?>" method="post">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
@@ -35,7 +61,7 @@
             </div>
 
             <?php
-                include 'includes/card_logo.php';
+            include 'includes/card_logo.php';
             ?>
         </div>
     </div>

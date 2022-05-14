@@ -1,0 +1,5 @@
+create db communify;
+
+CREATE TABLE `communify`.`auth` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(50) NOT NULL , `email` VARCHAR(80) NOT NULL , `password` VARCHAR(50) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `communify`.`communities` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(30) NOT NULL , `url` VARCHAR(50) NOT NULL , `tagline` VARCHAR(100) NOT NULL , `membership` VARCHAR(10) NOT NULL , `visibility` VARCHAR(20) NOT NULL , `category` VARCHAR(30) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

@@ -30,6 +30,13 @@
         </div>
     </a>
 
-    <a href="login.php" id="link-login" class="link">Login</a>
+    <?php if(isset($_SESSION["username"])) {?>
+        <p id="link-login">
+            <a href="home.php" class="link"><?php echo $_SESSION["username"] ?></a>
+            <a href="logout.php" class="link">Logout</a>
+        </p>
+    <?php } else { ?>
+        <a href="login.php" id="link-login" class="link">Login</a>
+    <?php } ?>
 
-</nav>
+    </nav>

@@ -1,3 +1,26 @@
+<?php
+require 'includes/header.php';
+require 'db/conn.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    $ret = isValidUser($conn, $email, $password);
+    if ($ret) {
+         
+        header("location: home.php");
+    }
+    else {
+        echo "
+            <script>
+                alert('Invalid email or password');
+            </script>
+        ";
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +41,7 @@
                 <h2>Welcome back</h2>
                 <p>Welcome bake enter your details</p>
 
-                <form action="login.php">
+                <form action="<?php $_PHP_SELF ?>" method="post">
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email" placeholder="Enter your email" required>
 

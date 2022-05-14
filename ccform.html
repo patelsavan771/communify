@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Network</title>
+    <link rel="stylesheet" href="styles/ccstyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span>Create a Community</span>
+        </div>
+        <div class="form1">
+
+            <form action="create_community.php" method="post">
+
+                <div class="group">
+                    <label for="name">Name:</label><br>
+                    <input type="text" name="name" id="name" placeholder="Give your learning community a name"
+                        required><br>
+                </div>
+
+                <div class="group">
+                    <label for="url">Create Website URL:</label><br>
+                    <input type="text" name="url" id="url" placeholder="Name your community" required> <br>
+                </div>
+
+                <div class="group">
+                    <label for="tagline">Tagline:</label><br>
+                    <input type="text" name="tagline" id="tagline" placeholder="tagline" required><br>
+
+                </div>
+
+                <div class="group">
+                    <label for="membership">Membership: Who can join this community</label> <br>
+
+                    <input type="radio" name="membership" id="open" value="open" checked>
+                    <label for="open"> Open - Anyone can join</label><br>
+
+                    <input type="radio" name="membership" id="closed" value="closed">
+                    <label for="closed"> Closed - Admins approve/invite members</label><br>
+                </div>
+
+                <div class="group">
+
+                    <label for="visibility">Visibility: How will your network be discovered by members</label><br>
+
+                    <input type="radio" name="visibility" id="searchable" value="searchable" checked>
+                    <label for="searchable"> Searchable: Your network is searchable on Unsolved for relevant names &
+                        tags</label><br>
+
+                    <input type="radio" name="visibility" id="secret" value="secret">
+                    <label for="secret"> Secret: Your network cannot be found via search or in suggested
+                        networks</label><br>
+
+                    <input type="radio" name="visibility" id="discoverable" value="discoverable">
+                    <label for="discoverable"> Discoverable: Your network can be discovered in "Suggested Networks"
+                        feature
+                        (Locked - Needs min 100 members)</label><br>
+
+                </div>
+
+                <div class="group">
+
+                    <label for="categorise">CATEGORISE YOUR NETWORK (MAX 3)</label><br>
+                    <input type="text" name="categorise" id="categorise" placeholder="Coding, Design, Maketing"> <br>
+                </div>
+
+                <input type="submit" id="submit" name="submit" value="Create Network">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

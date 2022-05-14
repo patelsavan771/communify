@@ -1,5 +1,5 @@
 <footer class="footer">
-    <a href="index.php">
+    <a href="index.php" class="link-text">
         <div class="logo" id="logo2">
             <svg width="90" viewBox="0 0 285 50.426944385875366">
                 <defs id="SvgjsDefs1418">

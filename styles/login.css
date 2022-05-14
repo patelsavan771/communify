@@ -83,3 +83,9 @@ textarea {
     margin-bottom: 15px;
     display: block;
 }
+
+.reg-yes {
+    text-align: center;
+    border: 2px solid rgb(35, 215, 35);
+    border-radius: 2px;
+}

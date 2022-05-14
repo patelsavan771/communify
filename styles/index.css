@@ -28,7 +28,7 @@ body {
 
 .link {
     color: rgba(255, 255, 255, .55);
-    
+
 }
 
 .link:hover {
@@ -36,16 +36,21 @@ body {
 }
 
 #link-login {
+    margin: 0px;
     position: absolute;
     top: 15px;
     right: 15px;
 }
 
+.link-text{
+    text-decoration: none;
+}
+
 #left {
-    
+
     width: 50%;
     box-sizing: border-box;
-    padding: 70px ;
+    padding: 70px;
     height: 60vh;
 
     margin-bottom: 50px;
@@ -108,6 +113,7 @@ body {
     .card {
         width: 80%;
     }
+
     #left {
         width: 100%;
     }
@@ -125,7 +131,7 @@ body {
 .footer {
     /* border : 1px solid yellow; */
     padding: 8px;
-    text-align:center;
+    text-align: center;
 
 }
 
@@ -151,14 +157,17 @@ body {
     background-color: white;
     color: #444;
 }
+
 .member-cards {
     display: flex;
     justify-content: center;
 }
+
 .member-card {
     width: 400px;
 }
-.member-card a{
+
+.member-card a {
     color: #444;
 }
 
@@ -168,4 +177,3 @@ body {
     border-radius: 50%;
     display: inline-block;
 }
-
