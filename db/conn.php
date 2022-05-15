@@ -133,4 +133,24 @@ function getUserProfileUrl($conn, $email) {
 }
 
 
+function creatNewPost($conn, $author, $email, $date, $body) {
+    $q = "INSERT INTO posts(author, email, date, body) VALUES ('$author', '$email', '$date', '$body')"; 
+    $result = mysqli_query($conn, $q);
+
+    if($result) {
+        return true;
+    }
+    else {
+        return false;
+    }
+
+}
+
+function getAllPosts($conn) {
+    $q = "select * from posts ORDER BY id desc";
+    $result = mysqli_query($conn, $q);
+    return $result;
+}
+
+
 ?>

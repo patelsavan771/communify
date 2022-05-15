@@ -6,6 +6,8 @@ if(!isset($_SESSION["username"]) && !isset($_SESSION["email"])) {
     header("location: login.php");
 }
 
+$posts = getAllPosts($conn);
+
 ?>
 
 <!DOCTYPE html>
@@ -44,17 +46,31 @@ if(!isset($_SESSION["username"]) && !isset($_SESSION["email"])) {
         </div>
 
         <div id="feed" class="border">
+
             <div class="post" id="create-post-div">
                 <h3>Create a Post</h3>
-                <form action="post.php" class="post">
-                    <textarea name="create-post-textarea" id="create-post-textarea" cols="30" rows="10"></textarea>
+                <form action="new_post.php" class="post" method="post">
+                    <textarea name="new_post" id="create-post-textarea" cols="30" rows="10"></textarea>
                     <div class="right-aligned">
                         <input type="submit" class="link-btn small-btn" id="post-btn" value="Post">
                     </div>
                 </form>
             </div>
 
-            <div class="post">
+
+
+            <?php
+                
+                include "includes/posts.php";
+
+
+            ?>
+
+
+
+
+            <!-- post templet -->
+            <!-- <div class="post">
                 <div class="post-header">
                     <div class="post-header-img-div">
                         <img src="images/savan.jpg" alt="post author pfp" class="post-header-img rounded">
@@ -69,7 +85,7 @@ if(!isset($_SESSION["username"]) && !isset($_SESSION["email"])) {
                     <p>Hello guys welcome to our community. this is dumy post.</p>
                 </div>
                 <button class="link-btn small-btn">like</button>
-            </div>
+            </div> -->
         </div>
 
         <div id="right" class="border">
