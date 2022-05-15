@@ -25,6 +25,7 @@ function registerUser($conn, $name, $email, $password)
             return false;
         } else {
             $_SESSION["username"] = $result["name"];
+            $_SESSION["email"] = $email;
             return true;
         }
     }
@@ -120,6 +121,15 @@ function updateUserProfile($conn, $email, $file) {
         }
     }
     return false;
+}
+
+function getUserProfileUrl($conn, $email) {
+    $q = "select img_path from users_info where email = '$email'";
+    $result = mysqli_query($conn, $q);
+    if($result) {
+        $result = mysqli_fetch_assoc($result);
+        return $result["img_path"];
+    }
 }
 
 

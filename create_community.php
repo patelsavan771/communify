@@ -8,7 +8,7 @@
         $tagline = $_POST["tagline"];
         $membership = $_POST["membership"];
         $visibility = $_POST["visibility"];
-        $catagory = $_POST["categorise"];
+        $category = $_POST["categorise"];
 
         $ret = createCommunity($conn, $name, $url, $tagline, $membership, $visibility, $category);
 

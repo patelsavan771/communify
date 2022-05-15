@@ -2,7 +2,7 @@
 require 'includes/header.php';
 require 'db/conn.php';
 
-if(!isset($_SESSION["username"])) {
+if(!isset($_SESSION["username"]) && !isset($_SESSION["email"])) {
     header("location: login.php");
 }
 
@@ -32,7 +32,7 @@ if(!isset($_SESSION["username"])) {
         <div id="left-profile" class="border">
             <div class="profile-card border">
                 <div class="sub-profile-div">                
-                    <img src="images/savan.jpg" class="profile-img rounded" alt="user profile">
+                    <img src="<?php echo getUserProfileUrl($conn, $_SESSION["email"]) ?>" class="profile-img rounded" alt="user profile">
                 </div>
                 <div class="sub-profile-div">
                     <?php echo $_SESSION["username"] ?>
@@ -44,7 +44,32 @@ if(!isset($_SESSION["username"])) {
         </div>
 
         <div id="feed" class="border">
-            feed here...
+            <div class="post" id="create-post-div">
+                <h3>Create a Post</h3>
+                <form action="post.php" class="post">
+                    <textarea name="create-post-textarea" id="create-post-textarea" cols="30" rows="10"></textarea>
+                    <div class="right-aligned">
+                        <input type="submit" class="link-btn small-btn" id="post-btn" value="Post">
+                    </div>
+                </form>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-header-img-div">
+                        <img src="images/savan.jpg" alt="post author pfp" class="post-header-img rounded">
+                    </div>
+                    <div class="header-info">
+                        <span style="margin-top: 4px;">Name</span><br>
+                        <div class="datetime"><small>date and time</small></div><br>
+                    </div>
+                </div>
+
+                <div class="post-body">
+                    <p>Hello guys welcome to our community. this is dumy post.</p>
+                </div>
+                <button class="link-btn small-btn">like</button>
+            </div>
         </div>
 
         <div id="right" class="border">

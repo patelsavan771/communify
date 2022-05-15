@@ -24,11 +24,11 @@ if(isset($_POST["submit"]) && $_SESSION["email"]) {
     $isUpdated = updateUserInfo($conn, $email, $name, $phone, $about, $expertise, $industries, $linkedin, $github, $tweeter);
 
     if(isset($_FILES['pfp'])) {
-        echo "
-            <script>
-                alert('updating your profile picture.');
-            </script>
-        ";
+        // echo "
+        //     <script>
+        //         alert('updating your profile picture.');
+        //     </script>
+        // ";
         
         $file = $_FILES['pfp'];
         $isUploaded = updateUserProfile($conn, $email, $file);
@@ -55,8 +55,5 @@ if(isset($_POST["submit"]) && $_SESSION["email"]) {
 
     }
 }
-
-
-
 
 ?>

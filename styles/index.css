@@ -42,7 +42,7 @@ body {
     right: 15px;
 }
 
-.link-text{
+.link-text {
     text-decoration: none;
 }
 
@@ -58,6 +58,10 @@ body {
 
 #left-text {
     font-size: 40px;
+}
+
+.disclaimer {
+    display: hidden;
 }
 
 
