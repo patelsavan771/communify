@@ -2,6 +2,7 @@
     require "includes/header.php";
 
     unset($_SESSION["username"]);
-    header("location: home.php");
+    unset($_SESSION["email"]);
+    header("location: index.php");
 
 ?>

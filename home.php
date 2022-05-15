@@ -38,7 +38,7 @@ if(!isset($_SESSION["username"])) {
                     <?php echo $_SESSION["username"] ?>
                 </div>
                 <div class="sub-profile-div">
-                    <a href="#" class="link-btn small-btn">update</a>
+                    <a href="profile.php" class="link-btn small-btn">profile</a>
                 </div>
             </div>
         </div>
