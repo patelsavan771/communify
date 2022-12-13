@@ -30,8 +30,9 @@
         </div>
     </a>
 
-    <?php if(isset($_SESSION["username"])) {?>
+    <?php if (isset($_SESSION["username"])) { ?>
         <p id="link-login">
+            <a href="quizhome.php" class="link">Quiz</a>
             <a href="home.php" class="link"><?php echo $_SESSION["username"] ?></a>
             <a href="logout.php" class="link">Logout</a>
         </p>
@@ -39,4 +40,4 @@
         <a href="login.php" id="link-login" class="link">Login</a>
     <?php } ?>
 
-    </nav>
+</nav>

@@ -104,7 +104,7 @@ function updateUserProfile($conn, $email, $file) {
 
     if(in_array($fileActualExt, $allowed)) {
         if($fileError === 0) {
-            if($fileSize < 1 * 1024* 1024) {
+            if($fileSize < 5 * 1024* 1024) {
                 $fileNameNew = uniqid('', true).".". $fileActualExt;
                 $fileDest = 'uploads/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDest);
